@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MKProm - Get #readytoprom2025</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Get #readytoprom2025!</h1>
+    <p>
+      At MK Prom in Bletchley, we know how important it is to stand out on your big night...
+      [Full Hero Content Here – Include all text from your Hero Section]
+    </p>
+    <p class="signature">Warm regards,<br>Mr. Neil Westerby & The MK Prom Team</p>
+  </header>
+
+  <section class="featured">
+    <h2>Featured Dresses</h2>
+    <ul>
+      <li>Beautiful Prom Dress Style 1: A stunning dress...</li>
+      <li>Elegant Evening Gown Style 2: Classic elegance...</li>
+      <li>Trendy Two-Piece Style 3: Stand out with...</li>
+    </ul>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to find your perfect dress?</h2>
+    <a href="#contact" class="btn">Book Your Fitting Today</a>
+  </section>
+
+  <section class="reviews">
+    <h2>Recent Reviews</h2>
+    <p>[Add 3 customer testimonials with 5-star ratings]</p>
+  </section>
+
+  <section class="about">
+    <h2>About</h2>
+    <h3>Neil Westerby</h3>
+    <p>"It is the perspective that counts..."</p>
+    <p>[Full Neil Content Here]</p>
+
+    <h3>The Trends</h3>
+    <p>[Trends Content]</p>
+
+    <h3>Tips to consider:</h3>
+    <p>[Tips Content]</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <h3>MK Prom is not just your ordinary prom dress shop...</h3>
+    <p>[Full Contact Content]</p>
+
+    <h4>Visit Our Salon</h4>
+    <p>Milton Keynes' Finest!</p>
+
+    <h4>Experience the Best!</h4>
+    <p>Book a private session for personalised advice.</p>
+
+    <address>
+      98 Queensway, Bletchley, Milton Keynes MK2 2RU, UK<br>
+      Phone: 01234 567890<br>
+      Email: info@mkprom-test.com<br>
+      Hours: Mon-Sat: 10am–6pm, Sun: Closed
+    </address>
+
+    <form>
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="text" placeholder="Subject" />
+      <textarea placeholder="Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 MKProm Test Site. Created for chatbot testing purposes.</p>
+    <nav>
+      <a href="#">Facebook</a> |
+      <a href="#">TikTok</a> |
+      <a href="#">Instagram</a> |
+      <a href="mailto:info@mkprom-test.com">Email</a>
+    </nav>
+  </footer>
+
+<div id="chatbot">
+  <div id="chat-log"></div>
+  <input type="text" id="chat-input" placeholder="Type your message..." />
+  <button onclick="sendMessage()">Send</button>
+</div>
+
+<script>
+  async function sendMessage() {
+    const input = document.getElementById("chat-input");
+    const message = input.value;
+    if (!message) return;
+
+    const chatLog = document.getElementById("chat-log");
+    chatLog.innerHTML += `<div class="user-msg">${message}</div>`;
+    input.value = "";
+
+    try {
+      const res = await fetch("YOUR_N8N_WEBHOOK_URL", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message })
+      });
+
+      const data = await res.json();
+      chatLog.innerHTML += `<div class="bot-msg">${data.reply || 'No response'}</div>`;
+    } catch (err) {
+      chatLog.innerHTML += `<div class="bot-msg error">Error contacting bot</div>`;
+    }
+  }
+</script>
+
+
+
+</body>
+</html>
