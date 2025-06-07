@@ -103,7 +103,7 @@
     input.value = "";
 
     try {
-      const res = await fetch("YOUR_N8N_WEBHOOK_URL", {
+      const res = await fetch("https://guru1234.app.n8n.cloud/webhook/c7ee7ac7-21bf-46aa-ab89-c7515fcf6f2a/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message })
