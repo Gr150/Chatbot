@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MK Prom | About</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -84,26 +85,23 @@
   </footer>
 
   <!-- n8n Chatbot Embed -->
-<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-<script type="module">
-  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-
-  createChat({
-    webhookUrl: 'https://guru1234.app.n8n.cloud/webhook/c7ee7ac7-21bf-46aa-ab89-c7515fcf6f2a/chat',
-    initialMessages: [
-      'Hi there! 👋',
-      'Looking for the perfect prom dress or advice? I’m here to help!'
-    ],
-    i18n: {
-      en: {
-        title: 'Hi, I’m your MK Prom assistant 💬',
-        subtitle: 'Ask me anything about booking, fittings, or styles!',
-        inputPlaceholder: 'Type your message…',
+  <script src="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.umd.js"></script>
+  <script>
+    n8nChat.createChat({
+      webhookUrl: 'https://guru1234.app.n8n.cloud/webhook/c7ee7ac7-21bf-46aa-ab89-c7515fcf6f2a/chat',
+      initialMessages: [
+        'Hi there! 👋',
+        'Looking for the perfect prom dress or advice? I’m here to help!',
+      ],
+      i18n: {
+        en: {
+          title: 'Hi, I’m your MK Prom assistant 💬',
+          subtitle: 'Ask me anything about booking, fittings, or styles!',
+          inputPlaceholder: 'Type your message…',
+        },
       },
-    },
-  });
-</script>
-
+    });
+  </script>
 
 </body>
 </html>
