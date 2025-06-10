@@ -106,3 +106,10 @@ button {
   cursor: pointer;
 }
 
+#chatbot-container input, #chatbot-container textarea {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    width: auto !important;
+}
