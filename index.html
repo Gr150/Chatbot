@@ -4,7 +4,137 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MK Prom | About</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    .hero {
+      background: linear-gradient(120deg, #7e4fff, #b17bff);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+
+    .btn-primary {
+      background-color: #fff;
+      color: #7e4fff;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #eee;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #7e4fff;
+    }
+
+    section p, section li {
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+
+    .trends ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .trends li {
+      background-color: #fff;
+      border-left: 5px solid #7e4fff;
+      padding: 15px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      border-radius: 5px;
+    }
+
+    .highlight-evie {
+      background-color: #fff3fd;
+      border-left: 4px solid #ff6fc0;
+      padding: 40px 20px;
+    }
+
+    .highlight-evie p {
+      font-style: italic;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact input, .contact textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact button {
+      padding: 10px;
+      background-color: #7e4fff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .contact button:hover {
+      background-color: #6938cc;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
@@ -83,28 +213,26 @@
     </div>
   </footer>
 
-
   <!-- n8n Chatbot Embed -->
-<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-<script type="module">
-  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+  <script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-  createChat({
-    webhookUrl: 'https://guru720421.app.n8n.cloud/webhook/c7ee7ac7-21bf-46aa-ab89-c7515fcf6f2a/chat',
-    initialMessages: [
-      'Hi there! 👋',
-      'Looking for the perfect prom dress or advice? I’m here to help!'
-    ],
-    i18n: {
-      en: {
-        title: 'Hi, I’m your MK Prom assistant 💬',
-        subtitle: 'Ask me anything about booking, fittings, or styles!',
-        inputPlaceholder: 'Type your message…',
+    createChat({
+      webhookUrl: 'https://guru720421.app.n8n.cloud/webhook/c7ee7ac7-21bf-46aa-ab89-c7515fcf6f2a/chat',
+      initialMessages: [
+        'Hi there! 👋',
+        'Looking for the perfect prom dress or advice? I’m here to help!'
+      ],
+      i18n: {
+        en: {
+          title: 'Hi, I’m your MK Prom assistant 💬',
+          subtitle: 'Ask me anything about booking, fittings, or styles!',
+          inputPlaceholder: 'Type your message…',
+        },
       },
-    },
-  });
-</script>
-
+    });
+  </script>
 
 </body>
 </html>
