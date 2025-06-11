@@ -61,7 +61,7 @@ form button {
   width: 300px;
   background: white;
   border: 2px solid #8a56e2;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 1rem;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   font-size: 0.9rem;
@@ -113,3 +113,33 @@ button {
     height: auto !important;
     width: auto !important;
 }
+
+/* Chatbot header */
+#chatbot-header {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.5rem;
+  font-weight: 600;
+  background-color: #8a56e2;
+  color: white;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+}
+
+/* More curved chatbot container */
+#chatbot {
+  border-radius: 20px;
+}
+
+/* Rounded input and button */
+#chat-input {
+  border-radius: 12px 0 0 12px;
+  border: 1px solid #8a56e2;
+  padding: 0.4rem 0.6rem;
+}
+
+button {
+  border-radius: 0 12px 12px 0;
+  border: none;
+  padding: 0.4rem 0.6rem;
+}
+
