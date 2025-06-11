@@ -27,17 +27,24 @@
       position: relative;
     }
 
-    .logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 80px;
-      height: auto;
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
     }
 
-    .hero h1 {
+    .hero-content h1 {
       font-size: 2.5rem;
       margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .hero-content h1 img {
+      height: 50px;
+      width: auto;
     }
 
     .hero p {
@@ -148,16 +155,18 @@
 <body>
 
   <header class="hero">
-    <img src="/mnt/data/6e62ad0a-97e6-4671-84be-df66810170df.png" alt="MK Prom Logo" class="logo">
     <div class="hero-content">
-      <h1>#readytoprom2025</h1>
+      <h1>
+        <img src="/mnt/data/6e62ad0a-97e6-4671-84be-df66810170df.png" alt="MK Prom Logo">
+        #readytoprom2025
+      </h1>
       <p>Book with a deposit and enjoy our exclusive dress guarantee – we won't sell your style to anyone else at your school.</p>
       <a href="#contact" class="btn-primary">Book Your Fitting</a>
     </div>
   </header>
 
   <!-- Remaining HTML content stays unchanged -->
-  
+
   <section class="promise">
     <div class="container">
       <h2>Our Promise To You</h2>
